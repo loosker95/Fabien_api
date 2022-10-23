@@ -1,0 +1,27 @@
+{
+  "name": "fabien_api",
+  "version": "1.0.0",
+  "description": "My first Api using nodeJS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loosker95"
+  },
+  "keywords": [
+    "NodeJs",
+    "Api"
+  ],
+  "author": "Fabien Louce Kerdely",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "mongoose": "^6.6.7"
+  }
+}
