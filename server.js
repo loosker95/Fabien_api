@@ -21,11 +21,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use("/", myRoutes);
-app.use("/api/users/", myRoutes)
-app.use("/api/add/", myRoutes)
-app.use("/api/show/:id", myRoutes)
-app.use("/api/update/:id", myRoutes)
-app.use("/api/delete/:id", myRoutes)
 
 
 app.listen(port, () =>{
