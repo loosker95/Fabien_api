@@ -34,6 +34,6 @@
             email: "fake@gmail.com",
             phone: "+84000000000", 
             website: "flk.com",
-			createAt: new Date(),
-			updateAt: new Date()
+		createAt: new Date(),
+		updateAt: new Date()
         }])
