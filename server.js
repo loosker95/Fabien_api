@@ -11,8 +11,6 @@ const localhost = "127.0.0.1";
 dotenv.config({path:'config.env'});
 const port = process.env.PORT || 1010;
 
-app.set('view engine', 'ejs')
-
 connectDB()
 
 app.use(bodyParser.json())
