@@ -3,8 +3,8 @@ const express = require('express');
 const dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 const app = express()
-const myRoutes = require('./routes/route')
-const connectDB = require('./database/connect');
+const myRoutes = require('./routes/v1/route')
+const connectDB = require('./models/connect');
 
 const localhost = "127.0.0.1";
 

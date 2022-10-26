@@ -1,7 +1,14 @@
-const userInfo = require('../modeles/modelUsers')
+const userInfo = require('../models/users.model')
+const {validationResult } = require('express-validator')
 
 module.exports = {
     addUser: async (req, res) =>{
+
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
+
         const {name, username, number, street, city, country, email, phone, website} = req.body
         const newUser = {name, username ,address: {number, street, city, country}, email, phone, website}
         try{      
@@ -41,6 +48,10 @@ module.exports = {
     },
 
     updateUser: async (req, res) =>{
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.status(400).json({ errors: errors.array() });
+        }
         try{
             const data = await userInfo.findByIdAndUpdate(req.params.id, {$set: req.body})
             if(data){          
